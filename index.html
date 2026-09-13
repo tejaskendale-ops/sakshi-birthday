@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Sakshi ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fff8f5;
+            color: #5d3b46;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            background:
+                linear-gradient(
+                    rgba(255, 231, 237, 0.82),
+                    rgba(255, 248, 245, 0.94)
+                ),
+                radial-gradient(circle at top, #f6b8ca, #fff8f5);
+        }
+
+        .hero-content {
+            max-width: 700px;
+            animation: fadeUp 1.5s ease;
+        }
+
+        .small-title {
+            color: #b86a82;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 10vw, 100px);
+            font-weight: normal;
+            color: #a84f70;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-family: Arial, sans-serif;
+            color: #795965;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 15px 28px;
+            border: none;
+            border-radius: 40px;
+            background: #c97994;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #a95170;
+            transform: scale(1.05);
+        }
+
+        .music-btn {
+            margin-left: 10px;
+            background: #e6a1b5;
+        }
+
+        .music-btn:hover {
+            background: #ca7895;
+        }
+
+        /* COMMON SECTIONS */
+
+        .section {
+            padding: 85px 25px;
+            text-align: center;
+        }
+
+        .section-title {
+            color: #a84f70;
+            font-size: clamp(30px, 6vw, 52px);
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .section-subtitle {
+            font-family: Arial, sans-serif;
+            color: #8b6873;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 45px;
+        }
+
+        /* PHOTO SECTION */
+
+        .photos-section {
+            background: #fff8f5;
+        }
+
+        .photo-gallery {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 12px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(150, 83, 105, 0.12);
+            transition: 0.3s;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-8px) rotate(1deg);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .photo-card p {
+            margin-top: 14px;
+            color: #a45d76;
+            font-size: 15px;
+        }
+
+        /* LETTER SECTION */
+
+        .letter-section {
+            background: #fceaf0;
+        }
+
+        .letter {
+            max-width: 750px;
+            margin: auto;
+            padding: 45px;
+            background: #fffdfb;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(150, 83, 105, 0.13);
+            text-align: left;
+        }
+
+        .letter p {
+            font-size: 17px;
+            line-height: 2;
+            color: #6d4a56;
+            margin-bottom: 18px;
+        }
+
+        .letter .signature {
+            text-align: right;
+            color: #a84f70;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        /* CINEMATIC SURPRISE */
+
+        .cinematic-surprise {
+            position: relative;
+            min-height: 650px;
+            padding: 90px 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 50% 40%,
+                    #633747,
+                    #2a1722 55%,
+                    #160e14
+                );
+            color: #fff0f4;
+        }
+
+        .cinema-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            animation: cinemaFade 2s ease;
+        }
+
+        .cinematic-surprise .small-title {
+            color: #edb5c7;
+        }
+
+        .cinema-title {
+            font-size: clamp(30px, 6vw, 52px);
+            font-weight: normal;
+            color: #ffe2ea;
+            margin: 22px 0;
+        }
+
+        .cinema-subtitle {
+            max-width: 450px;
+            margin: auto;
+            color: #e7c4ce;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .cinema-btn {
+            margin-top: 35px;
+            padding: 16px 28px;
+            border: 1px solid #e7a5ba;
+            border-radius: 40px;
+            background: #b96982;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cinema-btn:hover {
+            background: #d68ca4;
+            transform: scale(1.05);
+        }
+
+        .cinema-btn:disabled {
+            opacity: 0.8;
+            cursor: default;
+        }
+
+        .cinema-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: #c86b8b;
+            opacity: 0.12;
+            filter: blur(70px);
+            animation: glowPulse 5s infinite alternate;
+        }
+
+        .cinema-divider {
+            width: 70px;
+            height: 2px;
+            background: #e7a5ba;
+            margin: 35px auto;
+        }
+
+        .cinema-cake {
+            font-size: 90px;
+            animation: cakeFloat 3s ease-in-out infinite;
+        }
+
+        .birthday-heading {
+            color: #ffe0e9;
+            font-size: clamp(28px, 6vw, 48px);
+            font-weight: normal;
+            margin: 25px 0;
+        }
+
+        .cinema-message {
+            max-width: 480px;
+            margin: 20px auto;
+            color: #e7c4ce;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .heart-line {
+            color: #eea8bd;
+            font-size: 25px;
+            margin: 30px 0;
+            letter-spacing: 5px;
+        }
+
+        .final-love {
+            color: #f5d5df;
+            font-family: Georgia, serif;
+            font-size: 18px;
+            margin-top: 25px;
+        }
+
+        .signature {
+            color: #edb5c7;
+            font-size: 22px;
+            margin-top: 12px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px 20px;
+            text-align: center;
+            background: #2a1722;
+            color: #e7c4ce;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cinemaFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glowPulse {
+            from {
+                transform: scale(0.8);
+                opacity: 0.08;
+            }
+
+            to {
+                transform: scale(1.3);
+                opacity: 0.18;
+            }
+        }
+
+        @keyframes cakeFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 850px) {
+            .photo-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .photo-card img {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .hero h1 {
+                font-size: 58px;
+            }
+
+            .btn {
+                display: block;
+                margin: 25px auto 0;
+            }
+
+            .music-btn {
+                margin-left: auto;
+            }
+
+            .photo-gallery {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+            }
+
+            .photo-card img {
+                height: 380px;
+            }
+
+            .letter {
+                padding: 28px 22px;
+            }
+
+            .letter p {
+                font-size: 16px;
+            }
+
+            .cinematic-surprise {
+                padding: 80px 20px;
+            }
+        }
+        .confetti {
+    position: fixed;
+    top: -20px;
+    width: 10px;
+    height: 18px;
+    z-index: 9999;
+    pointer-events: none;
+    animation: confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+.photo-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(25, 10, 18, 0.92);
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.photo-lightbox img {
+    max-width: 95%;
+    max-height: 85vh;
+    border-radius: 15px;
+    box-shadow: 0 0 35px rgba(255, 180, 205, 0.35);
+    object-fit: contain;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- BACKGROUND MUSIC -->
+
+    <audio id="birthdayMusic" loop>
+        <source src="music/tum-se-hi.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+    </audio>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="small-title">
+                A little surprise for
+            </div>
+
+            <h1>Sakshi ❤️</h1>
+
+            <p>
+                Someone very special deserves a very special birthday surprise.
+            </p>
+
+            <p>
+                This little website is made especially for you. ✨
+            </p>
+
+            <button class="btn" onclick="openSurprise()">
+                Open Your Surprise ♡
+            </button>
+
+            <button class="btn music-btn" onclick="playMusic()">
+                ♫ Play Our Song
+            </button>
+
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+
+    <main id="website-content" class="hidden">
+
+        <!-- PHOTO SECTION -->
+
+        <section class="section photos-section">
+
+            <h2 class="section-title">
+                Our Little Memories 📸
+            </h2>
+
+            <p class="section-subtitle">
+                Every picture has a story, and every memory with you is special. ❤️
+            </p>
+
+            <div class="photo-gallery">
+
+                <div class="photo-card">
+                    <img src="photos/sakshi1.jpeg" alt="Sakshi memory 1"  onclick="openPhoto(this.src)">
+                    <p>One beautiful memory 🤍</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photos/sakshi2.jpeg" alt="Sakshi memory 2" onclick="openPhoto(this.src)">
+                    <p>Your beautiful smile ✨</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photos/sakshi3.jpeg" alt="Sakshi memory 3" onclick="openPhoto(this.src)">
+                    <p>A moment to remember 💗</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="photos/sakshi4.jpeg" alt="Sakshi memory 4" onclick="openPhoto(this.src)">
+                    <p>Special memories forever 🌸</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LETTER SECTION -->
+
+        <section class="section letter-section">
+
+            <h2 class="section-title">
+                A Little Letter For You 💌
+            </h2>
+
+            <p class="section-subtitle">
+                Some feelings are better written from the heart.
+            </p>
+
+            <div class="letter">
+
+                <p>
+                    Dear Sakshi, ❤️
+                </p>
+
+                <p>
+                    Happiest Birthday to my favourite person! 🎂💗
+                </p>
+
+                <p>
+                    Tujha smile, tujha cute nature ani tujhya sobat spend kelele
+                    little moments majhya sathi khup special aahet.
+                </p>
+
+                <p>
+                    Tu nehmich happy rahavi, tujhya life madhle sagle dreams
+                    complete vhavet ani tujha face varcha smile kadhi hi kami hou naye,
+                    hi manapasun wish aahe.
+                </p>
+
+                <p>
+                    You deserve all the love, happiness, peace and beautiful
+                    things in this world. Never forget how special you are. 🤍
+                </p>
+
+                <p>
+                    Once again, Happiest Birthday, Sakshi! 🎀
+                </p>
+
+                <p class="signature">
+                    With lots of love,<br>
+                    Tejas ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- CINEMATIC FINAL SURPRISE -->
+
+        <section class="cinematic-surprise">
+
+            <div class="cinema-glow"></div>
+
+            <div class="cinema-content">
+
+                <div class="small-title">
+                    One last little surprise
+                </div>
+
+                <h2 class="cinema-title">
+                    For the Birthday Girl ✨
+                </h2>
+
+                <p class="cinema-subtitle">
+                    Before you leave, there is one more little surprise waiting
+                    for you...
+                </p>
+
+                <button
+                    class="cinema-btn"
+                    onclick="startCinematicSurprise()">
+                    Open Your Final Surprise 🎁
+                </button>
+
+                <div id="cinematic-reveal" class="hidden">
+
+                    <div class="cinema-divider"></div>
+
+                    <div class="cinema-cake">
+                        🎂
+                    </div>
+
+                    <h2 class="birthday-heading">
+                        Happy Birthday, Sakshi! ❤️
+                    </h2>
+
+                    <p class="cinema-message">
+                        May your smile always shine brighter than a thousand stars.
+                    </p>
+
+                    <p class="cinema-message">
+                        May every dream in your heart come true, and may your life
+                        always be filled with love, peace and happiness. 🤍
+                    </p>
+
+                    <p class="cinema-message">
+                        You deserve the most beautiful things this world has to offer.
+                    </p>
+
+                    <div class="heart-line">
+                        ♡ &nbsp; ✦ &nbsp; ♡ &nbsp; ✦ &nbsp; ♡
+                    </div>
+
+                    <p class="final-love">
+                        Made with love, especially for you.
+                    </p>
+
+                    <p class="signature">
+                        — Tejas ❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        Made with love for Sakshi ❤️ | From Tejas
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+
+        function playMusic() {
+            const music = document.getElementById("birthdayMusic");
+
+            music.play()
+                .then(function () {
+                    alert("Tum Se Hi is playing ❤️");
+                })
+                .catch(function () {
+                    alert("Music play zala nahi. MP3 file cha path check kar.");
+                });
+        }
+        function openSurprise() {
+            const content = document.getElementById("website-content");
+
+            content.classList.remove("hidden");
+
+            content.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+
+         function startCinematicSurprise() {
+    const reveal = document.getElementById("cinematic-reveal");
+    const button = document.querySelector(".cinema-btn");
+
+    if (reveal) {
+        reveal.classList.remove("hidden");
+        reveal.style.display = "block";
+    }
+
+    if (button) {
+        button.textContent = "Your surprise is here ❤️";
+        button.disabled = true;
+    }
+
+    createConfetti();
+
+    if (reveal) {
+        reveal.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+}
+
+function createConfetti() {
+    const colors = [
+        "#f4a6bd",
+        "#ffd166",
+        "#ef476f",
+        "#cdb4db",
+        "#ffffff",
+        "#ffcad4"
+    ];
+
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement("div");
+
+        confetti.classList.add("confetti");
+
+        confetti.style.left = Math.random() * 100 + "vw";
+
+        confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        confetti.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        confetti.style.transform =
+            "rotate(" + Math.random() * 360 + "deg)";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(function() {
+            confetti.remove();
+        }, 6000);
+    }
+}
+function openPhoto(imageSource) {
+    const lightbox = document.getElementById("photoLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+
+    lightboxImage.src = imageSource;
+    lightbox.style.display = "flex";
+}
+
+function closePhoto() {
+    const lightbox = document.getElementById("photoLightbox");
+    lightbox.style.display = "none";
+}
+    </script>
+<div id="photoLightbox" class="photo-lightbox" onclick="closePhoto()">
+    <button class="close-lightbox" onclick="closePhoto()">×</button>
+
+    <img id="lightboxImage" src="" alt="Large photo">
+</div>
+
+</body>
+</html>
